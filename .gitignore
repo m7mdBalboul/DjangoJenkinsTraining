@@ -1,0 +1,6 @@
+# IDE
+.idea
+.vscode
+
+# MISC
+.DS_Store
