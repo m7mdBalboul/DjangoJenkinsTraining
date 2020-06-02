@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block headerTitle %}
+    Dashboard
+{% endblock %}
+
+{% block content %}
+    <table id="data-table" style="width: 100%">
+        <!--        Table is created in buildInfoTable.js using jqueryTable-->
+    </table>
+{% endblock %}
+
+{% block javascript %}
+    {{ api|json_script:"api" }}
+    <script defer src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script defer src="{% static 'js/buildInfoTable.js' %}"></script>
+{% endblock %}

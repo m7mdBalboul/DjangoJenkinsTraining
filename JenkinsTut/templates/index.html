@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block pageContent %}
+        <div class="ui full height grid" style="height: 100%; margin: 0">
+            <div class="two wide column grey">
+                <div class="ui middle aligned divided animated list">
+                    <a class="active item">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h2 class="header">
+                                Dashboard
+                            </h2>
+                            <div class="arrow-right">
+                            </div>
+                        </div>
+                    </a>
+                    <a class="active item">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h2 class="header">
+                                Trigger
+                            </h2>
+                            <div class="arrow-right">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="fourteen wide column" style="padding: 0">
+                <h3 class="ui block header">
+                    {% block headerTitle %}
+                    <!--            page header title goes here-->
+                    {% endblock %}
+                </h3>
+                <div class="ui stretched segment">
+                    {% block content %}
+                    <!--            Content Goes here-->
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+{% endblock %}
