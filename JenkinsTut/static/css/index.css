@@ -18,3 +18,9 @@
     border-bottom: 10px solid transparent;
     border-right:10px solid rgba(0,0,0,.87);
 }
+
+.group {
+    background-color: #767676 !important;
+    text-align: center;
+    border: 1px solid black;
+}

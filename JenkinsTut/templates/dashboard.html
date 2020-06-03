@@ -5,13 +5,16 @@
     Dashboard
 {% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+{% endblock %}
+
 {% block headerTitle %}
     Dashboard
 {% endblock %}
 
 {% block content %}
-    <table id="data-table" style="width: 100%">
-        <!--        Table is created in buildInfoTable.js using jqueryTable-->
+    <table id="data-table" class="display compact">
     </table>
 {% endblock %}
 
