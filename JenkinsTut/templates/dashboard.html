@@ -14,12 +14,22 @@
 {% endblock %}
 
 {% block content %}
-    <table id="data-table" class="display compact">
-    </table>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+        <div style="display: flex; align-items: center; justify-content: center">        
+            <figure class="highcharts-figure">
+                <div id="barChart"></div>
+            </figure>
+            <figure class="highcharts-figure">
+                <div id="pieChart"></div>
+            </figure>
+        </div>
+        <table id="data-table" class="display compact"></table>
+    </div>
 {% endblock %}
 
 {% block javascript %}
     {{ api|json_script:"api" }}
     <script defer src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-    <script defer src="{% static 'js/buildInfoTable.js' %}"></script>
+    <script defer src="https://code.highcharts.com/highcharts.js"></script>
+    <script type="module" src="{% static 'js/dashboard.js' %}"></script>
 {% endblock %}
